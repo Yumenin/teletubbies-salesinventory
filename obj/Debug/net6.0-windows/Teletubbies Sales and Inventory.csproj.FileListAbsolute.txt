@@ -1,0 +1,65 @@
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.exe
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.deps.json
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.runtimeconfig.json
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.AssemblyReference.cache
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.AddProduct.resources
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.InventoryManagerWindow.resources
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Selection.resources
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.GenerateResource.cache
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfoInputs.cache
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfo.cs
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CoreCompileInputs.cache
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\refint\Teletubbies Sales and Inventory.dll
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.UpdateProduct.resources
+C:\Users\udalj\source\repos\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.RemoveProduct.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.exe
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.deps.json
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.runtimeconfig.json
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.AssemblyReference.cache
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.AddProduct.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.InventoryManagerWindow.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.RemoveProduct.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Selection.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.UpdateProduct.resources
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.GenerateResource.cache
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfoInputs.cache
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfo.cs
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CoreCompileInputs.cache
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\refint\Teletubbies Sales and Inventory.dll
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
+C:\Users\Casey Aurelio\Downloads\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Properties.Resources.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.exe
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.deps.json
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.runtimeconfig.json
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.AssemblyReference.cache
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.AddProduct.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.InventoryManagerWindow.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Properties.Resources.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.RemoveProduct.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Selection.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.UpdateProduct.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.GenerateResource.cache
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfoInputs.cache
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfo.cs
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CoreCompileInputs.cache
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\refint\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
