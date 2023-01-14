@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -38,13 +39,16 @@ namespace Teletubbies_Sales_and_Inventory
                 $"'{numUpDownNormalPrice.Value}'," +
                 $"'{numUpDownDiscountRate.Value}')";
             cmd.ExecuteNonQuery();
+            SQL.conn.Close();
+            SQL.RefreshGridView();
+            
             MessageBox.Show("Added product.", "Product added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            txtProductID.Text = (ItemsData.Products.Count + 1).ToString();
+            SQL.RefreshGridView();
+            txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
             Console.BackgroundColor = ConsoleColor.Blue;
         }
 
@@ -77,5 +81,7 @@ namespace Teletubbies_Sales_and_Inventory
                 txtProductID.Text = "";
             }
         }
+
+        
     }
 }

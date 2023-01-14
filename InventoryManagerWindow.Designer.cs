@@ -47,10 +47,9 @@ namespace Teletubbies_Sales_and_Inventory
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(12, 105);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Location = new System.Drawing.Point(10, 79);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(206, 67);
+            this.btnAdd.Size = new System.Drawing.Size(180, 50);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -66,16 +65,14 @@ namespace Teletubbies_Sales_and_Inventory
             this.gridviewProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewProductList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gridviewProductList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.gridviewProductList.Location = new System.Drawing.Point(242, 105);
-            this.gridviewProductList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridviewProductList.Location = new System.Drawing.Point(212, 79);
             this.gridviewProductList.Name = "gridviewProductList";
             this.gridviewProductList.ReadOnly = true;
             this.gridviewProductList.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gridviewProductList.RowHeadersWidth = 51;
             this.gridviewProductList.RowTemplate.Height = 25;
-            this.gridviewProductList.Size = new System.Drawing.Size(785, 357);
+            this.gridviewProductList.Size = new System.Drawing.Size(687, 268);
             this.gridviewProductList.TabIndex = 2;
-            this.gridviewProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewProductList_CellContentClick_1);
             // 
             // btnUpdate
             // 
@@ -83,10 +80,9 @@ namespace Teletubbies_Sales_and_Inventory
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdate.Location = new System.Drawing.Point(12, 246);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(10, 184);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(206, 67);
+            this.btnUpdate.Size = new System.Drawing.Size(180, 50);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -98,10 +94,9 @@ namespace Teletubbies_Sales_and_Inventory
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRemove.Location = new System.Drawing.Point(12, 395);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemove.Location = new System.Drawing.Point(10, 296);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(206, 67);
+            this.btnRemove.Size = new System.Drawing.Size(180, 50);
             this.btnRemove.TabIndex = 4;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -112,9 +107,9 @@ namespace Teletubbies_Sales_and_Inventory
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(339, 19);
+            this.label1.Location = new System.Drawing.Point(297, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 46);
+            this.label1.Size = new System.Drawing.Size(260, 37);
             this.label1.TabIndex = 14;
             this.label1.Text = "Adding new product";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -123,23 +118,23 @@ namespace Teletubbies_Sales_and_Inventory
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 86);
+            this.panel1.Size = new System.Drawing.Size(888, 64);
             this.panel1.TabIndex = 15;
             // 
             // InventoryManagerWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1048, 491);
+            this.ClientSize = new System.Drawing.Size(917, 368);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.gridviewProductList);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InventoryManagerWindow";
             this.Text = "InventoryManagerWindow";
             this.Load += new System.EventHandler(this.InventoryManagerWindow_Load_1);
@@ -153,10 +148,15 @@ namespace Teletubbies_Sales_and_Inventory
         #endregion
 
         private Button btnAdd;
-        public DataGridView gridviewProductList;
+        public  DataGridView gridviewProductList;
         private Button btnUpdate;
         private Button btnRemove;
         private Label label1;
         private Panel panel1;
+
+        public static void refreshGridView()
+        {
+           
+        }
     }
 }
