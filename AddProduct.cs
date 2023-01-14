@@ -41,14 +41,24 @@ namespace Teletubbies_Sales_and_Inventory
             cmd.ExecuteNonQuery();
             SQL.conn.Close();
             SQL.RefreshGridView();
-            
+            InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
+            ItemsData.deletedIDs.Remove(0);
             MessageBox.Show("Added product.", "Product added", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
+
             SQL.RefreshGridView();
-            txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
+            if (ItemsData.deletedIDs.Count > 0)
+            {
+                txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
+            }
+            else
+            {
+                txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
+            }
+
             Console.BackgroundColor = ConsoleColor.Blue;
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -20,7 +21,7 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void UpdateProduct_Load(object sender, EventArgs e)
         {
-            gridviewUpdateProductList.DataSource = ItemsData.Products;
+            gridviewUpdateProductList.DataSource = ItemsData.Inventory;
             gridviewUpdateProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
         }
@@ -30,13 +31,12 @@ namespace Teletubbies_Sales_and_Inventory
             currentRowIndex = e.RowIndex;
             if (currentRowIndex > -1)
             {
-                Product productSelected = (Product)ItemsData.Products[currentRowIndex];
-                txtProductID.Text = productSelected.productID.ToString();
-                txtProductName.Text = productSelected.productName;
-                numUpDownCurrentStock.Value = productSelected.currentStockQuantity;
-                numUpDownCurrentPrice.Value = productSelected.currentPrice;
-                numUpDownNormalPrice.Value = productSelected.normalPrice;
-                numUpDownDiscountRate.Value = productSelected.discountRate;
+                txtProductID.Text = ItemsData.Inventory.Rows[currentRowIndex][0].ToString();
+                txtProductName.Text = ItemsData.Inventory.Rows[currentRowIndex][1].ToString();
+                numUpDownCurrentStock.Value = Convert.ToDecimal(ItemsData.Inventory.Rows[currentRowIndex][2]);
+                numUpDownCurrentPrice.Value = Convert.ToDecimal(ItemsData.Inventory.Rows[currentRowIndex][3]);
+                numUpDownNormalPrice.Value = Convert.ToDecimal(ItemsData.Inventory.Rows[currentRowIndex][4]);
+                numUpDownDiscountRate.Value = Convert.ToDecimal(ItemsData.Inventory.Rows[currentRowIndex][5]);
 
             }
         }
@@ -46,38 +46,24 @@ namespace Teletubbies_Sales_and_Inventory
            
             if (currentRowIndex > -1)
             {
-                Product productSelected = (Product)ItemsData.Products[currentRowIndex];
-                // If text field was somehow modified but its still the same value as before
+                SQL.conn.Open();
+                SqlCommand cmd = SQL.conn.CreateCommand();
+                cmd.CommandText = $"UPDATE Products " +
+                    $"SET productName = '{txtProductName.Text}'," +
+                    $"currentStockQuantity = '{numUpDownCurrentStock.Value}'," +
+                    $"currentPrice = '{numUpDownCurrentPrice.Value}'," +
+                    $"normalPrice = '{numUpDownNormalPrice.Value}'," +
+                    $"discountRate = '{numUpDownDiscountRate.Value}'" +
+                    $"WHERE productID = {txtProductID.Text}";
+                //MessageBox.Show($"{txtProductName.Text}, {numUpDownCurrentStock.Value}, {numUpDownCurrentPrice},  {numUpDownNormalPrice.Value}, {numUpDownDiscountRate.Value}, {txtProductID.Text}");
 
-                if (idFieldChanged)
-                {
-                    //TODO: Try to modify using LINQ if possible
-                    
-                    if (!txtProductID.Text.Equals(productSelected.productID.ToString()))
-                    {
-                        foreach (Product product in ItemsData.Products)
-                        {
-                            if (product.productID.ToString().Equals(txtProductID.Text))
-                            {
-                                MessageBox.Show("Product ID must be unique.");
-                                return;
-                            }
-                        }
-                    }
-                    
-                }
-                productSelected.productID = !txtProductID.Text.Equals("") ? Convert.ToInt32(txtProductID.Text) : productSelected.productID;
-                if (txtProductID.Text.Equals("")) { MessageBox.Show("Empty product ID was found. The ID was set to its original ID prior to change."); } 
-                productSelected.productName = txtProductName.Text;
-                productSelected.currentStockQuantity = Convert.ToInt32(numUpDownCurrentStock.Value);
-                productSelected.currentPrice = numUpDownCurrentPrice.Value;
-                productSelected.normalPrice = numUpDownNormalPrice.Value;
-                productSelected.discountRate = numUpDownDiscountRate.Value;
-                ItemsData.Products[currentRowIndex] = productSelected;
-                CSVOperations.UpdateCSV(ItemsData.Products, Selection.filePath);
-                gridviewUpdateProductList.Refresh();
-                
-                
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Product record updated", "Record updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SQL.conn.Close();
+                SQL.RefreshGridView();
+                gridviewUpdateProductList.DataSource = ItemsData.Inventory;
+                InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
+
             }
             else
             {

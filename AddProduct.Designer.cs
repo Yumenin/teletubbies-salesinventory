@@ -269,6 +269,7 @@
             this.numUpDownNormalPrice.Name = "numUpDownNormalPrice";
             this.numUpDownNormalPrice.Size = new System.Drawing.Size(236, 19);
             this.numUpDownNormalPrice.TabIndex = 21;
+            this.numUpDownNormalPrice.Maximum = decimal.MaxValue;
             this.numUpDownNormalPrice.ThousandsSeparator = true;
             this.numUpDownNormalPrice.ValueChanged += new System.EventHandler(this.numUpDownNormalPrice_ValueChanged);
             // 
@@ -294,6 +295,11 @@
             0,
             131072});
             this.numUpDownDiscountRate.Location = new System.Drawing.Point(8, 24);
+            this.numUpDownDiscountRate.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numUpDownDiscountRate.Name = "numUpDownDiscountRate";
             this.numUpDownDiscountRate.Size = new System.Drawing.Size(236, 19);
             this.numUpDownDiscountRate.TabIndex = 23;
@@ -350,6 +356,7 @@
         private TextBox txtProductName;
         private TextBox txtCurrentPrice;
         private Button btnAddProduct;
+        
         private Label lblMainLabel;
         private Panel panel1;
         private Panel panel2;

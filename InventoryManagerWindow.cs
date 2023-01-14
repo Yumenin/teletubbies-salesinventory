@@ -13,9 +13,11 @@ namespace Teletubbies_Sales_and_Inventory
 {
     public partial class InventoryManagerWindow : Form
     {
+        public static InventoryManagerWindow InventoryManagerWindow_Instance;
         public InventoryManagerWindow()
         {
             InitializeComponent();
+            InventoryManagerWindow_Instance = this;
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)

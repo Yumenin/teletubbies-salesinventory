@@ -12,7 +12,9 @@ namespace Teletubbies_Sales_and_Inventory
     {
         public static BindingSource Products { get; set; }
         public static DataTable Inventory { get; set; }
-     
+
+        public static List<int> deletedIDs = new List<int>();
+
     }
 
    
