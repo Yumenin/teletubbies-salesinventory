@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "NV5gGrU7LKlXd9aOpztwEXi3wabUzdmY5prz5cO5VJhyNbaWt18UumfGs0cBXirYxj1zpH0sQ2oiXiEdhvOJWw==",
+  "dgSpecHash": "N9332h1ojV3y8JAZrlCU72LvDHgHixzZC47k611ZXLSm55VsReB3S3BuBBeHw/Sx0BmX7x4rEDPr9vZGVlfPMg==",
   "success": true,
   "projectFilePath": "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Teletubbies Sales and Inventory.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\udalj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\udalj\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

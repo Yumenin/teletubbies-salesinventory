@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,47 +20,26 @@ namespace Teletubbies_Sales_and_Inventory
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Add Button
         {
-            bool productIDBoxHasText = txtProductID.Text != "" ? true : false;
-            if (productIDBoxHasText)
-            {
-                foreach (Product product in ItemsData.Products)
-                {
-                    string currentProductID = (product.productID).ToString();
-                    if (txtProductID.Text.Equals(currentProductID))
-                    {
-                        MessageBox.Show("An existing ID is already present in the list. Please use a unique id.");
-                        return;
-                    }
-                }
-            }
-            Product item = null;
-            try
-            {
-                item = new Product()
-                {
-                    productID = productIDBoxHasText ? Convert.ToInt32(txtProductID.Text) : Convert.ToInt32(ItemsData.Products.Count) + 1,
-                    productName = txtProductName.Text,
-                    currentStockQuantity = Convert.ToInt32(numUpDownCurrentStock.Value),
-                    currentPrice = Convert.ToDecimal(txtCurrentPrice.Text),
-                    normalPrice = numUpDownNormalPrice.Value,
-                    discountRate = numUpDownDiscountRate.Value
-                   
-                }; 
-            } catch (FormatException err)
-            {
-                MessageBox.Show("Please fill all the fields or type an appropriate input in one of the fields provided.");
-            }
+            SQL.conn.Open();
+            SqlCommand cmd = SQL.conn.CreateCommand();
+            /*cmd.CommandText = "INSERT INTO Products VALUES ('"
+                + txtProductID.Text
+                + "','" + txtLastName.Text
+                + "','" + txtFirstName.Text
+                + "','" + txtMiddleInitial.Text
+                + "','" + txtAge.Text + "')";*/
+            cmd.CommandText = $"INSERT INTO Products VALUES (" +
+                $"'{txtProductID.Text}'," +
+                $"'{txtProductName.Text}'," +
+                $"'{numUpDownCurrentStock.Value}'," +
+                $"'{txtCurrentPrice.Text}'," +
+                $"'{numUpDownNormalPrice.Value}'," +
+                $"'{numUpDownDiscountRate.Value}')";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Added product.", "Product added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
-            if (item != null) { 
-                ItemsData.Products.Add(item);
-                CSVOperations.UpdateCSV(ItemsData.Products, Selection.filePath);
-                txtProductID.Text = (ItemsData.Products.Count + 1).ToString(); 
-            }
-            
-            
         }
 
         private void AddProduct_Load(object sender, EventArgs e)

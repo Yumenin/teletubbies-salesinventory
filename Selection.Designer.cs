@@ -94,7 +94,6 @@
             this.Controls.Add(this.btnInventoryManager);
             this.Name = "Selection";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Selection_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

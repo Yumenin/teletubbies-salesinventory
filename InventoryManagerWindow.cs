@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,8 +51,17 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void InventoryManagerWindow_Load_1(object sender, EventArgs e)
         {
-            gridviewProductList.DataSource = ItemsData.Products;
             gridviewProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            SQL.conn.Open();
+
+            SqlCommand cmd = SQL.conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM Products";
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            gridviewProductList.DataSource = dt;
+
+            SQL.conn.Close();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

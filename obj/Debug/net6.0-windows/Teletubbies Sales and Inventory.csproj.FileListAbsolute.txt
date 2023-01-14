@@ -63,3 +63,10 @@ C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inv
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CopyComplete

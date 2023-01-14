@@ -134,6 +134,7 @@
             this.txtProductID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtProductID.Location = new System.Drawing.Point(10, 24);
             this.txtProductID.Name = "txtProductID";
+            this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(376, 16);
             this.txtProductID.TabIndex = 6;
             this.txtProductID.Text = "0";
