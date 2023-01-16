@@ -21,7 +21,6 @@ namespace Teletubbies_Sales_and_Inventory
 
             SQL.conn.Open();
 
-
             SqlCommand cmd = SQL.conn.CreateCommand();
             cmd.CommandText = "SELECT * FROM Products";
             SqlDataAdapter sda = new SqlDataAdapter(cmd);

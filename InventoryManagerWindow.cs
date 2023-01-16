@@ -49,6 +49,7 @@ namespace Teletubbies_Sales_and_Inventory
         {
             gridviewProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             SQL.RefreshGridView();
+            ItemsData.updateDeletedIDList();
             gridviewProductList.DataSource = ItemsData.Inventory;
         }
 

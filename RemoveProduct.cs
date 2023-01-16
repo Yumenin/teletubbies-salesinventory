@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,22 +20,29 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void RemoveProduct_Load(object sender, EventArgs e)
         {
-            gridviewRemoveProductList.DataSource = ItemsData.Products;
+            gridviewRemoveProductList.DataSource = ItemsData.Inventory;
             gridviewRemoveProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (currentRowIndex > -1 && ItemsData.Products.Count > 0 )
+            if (currentRowIndex >= 0)
             {
-                ItemsData.Products.RemoveAt(currentRowIndex);
+                SQL.conn.Open();
+                SqlCommand cmd = SQL.conn.CreateCommand();
+                cmd.CommandText = $"DELETE FROM Products WHERE productID = {currentRowIndex + 1}";
+                cmd.ExecuteNonQuery();
+                SQL.conn.Close();
+                ItemsData.addDeletedID(currentRowIndex + 1);
+                SQL.RefreshGridView();
+                InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
+                gridviewRemoveProductList.DataSource = ItemsData.Inventory;
                 toolStripProgressBarCompletion.Value = 0;
                 while (toolStripProgressBarCompletion.Value < 100)
                 {
                     toolStripProgressBarCompletion.PerformStep();
                 }
                 toolStripLabelOperationStatus.Text = "Selection successfully deleted.";
-                CSVOperations.UpdateCSV(ItemsData.Products, Selection.filePath);
                 currentRowIndex = -1;
                 toolStripLabelCurrentSelection.Text = "No cell currently selected.";
             }
@@ -48,8 +56,8 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void gridviewRemoveProductList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            currentRowIndex = e.RowIndex;
-            toolStripLabelCurrentSelection.Text = $"Current selected row is {currentRowIndex}";
+            currentRowIndex = (int) gridviewRemoveProductList.Rows[e.RowIndex].Cells[0].Value;
+            toolStripLabelCurrentSelection.Text = $"Current selected ID is {currentRowIndex}";
         }
     }
 }

@@ -23,14 +23,18 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void button1_Click(object sender, EventArgs e) // Add Button
         {
+            if (ItemsData.deletedIDs.Count > 0)
+            {
+                /*string test = "";
+                foreach(int i in ItemsData.deletedIDs)
+                {
+                    test += $"{i.ToString()}, ";
+                }
+                MessageBox.Show($"Deleted ids exists, {test}");*/
+                txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
+            }
             SQL.conn.Open();
             SqlCommand cmd = SQL.conn.CreateCommand();
-            /*cmd.CommandText = "INSERT INTO Products VALUES ('"
-                + txtProductID.Text
-                + "','" + txtLastName.Text
-                + "','" + txtFirstName.Text
-                + "','" + txtMiddleInitial.Text
-                + "','" + txtAge.Text + "')";*/
             cmd.CommandText = $"INSERT INTO Products VALUES (" +
                 $"'{txtProductID.Text}'," +
                 $"'{txtProductName.Text}'," +
@@ -42,20 +46,33 @@ namespace Teletubbies_Sales_and_Inventory
             SQL.conn.Close();
             SQL.RefreshGridView();
             InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
-            ItemsData.deletedIDs.Remove(0);
+            if (ItemsData.deletedIDs.Count > 0)
+            {
+                ItemsData.renewDeletedId(Convert.ToInt32(txtProductID.Text));
+                ItemsData.updateDeletedIDList();
+                if (ItemsData.deletedIDs.Count == 0)
+                {
+                    txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
+                }
+            }
+            else
+            {
+                txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
+            }
             MessageBox.Show("Added product.", "Product added", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-
             SQL.RefreshGridView();
             if (ItemsData.deletedIDs.Count > 0)
             {
                 txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
+                //MessageBox.Show("Deleted ids exist during load");
             }
             else
             {
+                //MessageBox.Show("No deleted ids exist during load");
                 txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
             }
 

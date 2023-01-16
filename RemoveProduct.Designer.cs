@@ -134,5 +134,6 @@
         private ToolStripStatusLabel toolStripLabelCurrentSelection;
         private ToolStripProgressBar toolStripProgressBarCompletion;
         private ToolStripStatusLabel toolStripLabelOperationStatus;
+        private string selector;
     }
 }
