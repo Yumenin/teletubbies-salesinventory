@@ -13,7 +13,7 @@ namespace Teletubbies_Sales_and_Inventory
 
         public static SqlConnection conn = new SqlConnection("" +
                 "Data Source=(LocalDB)\\MSSQLLocalDB;" +
-                "AttachDbFilename=C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Inventory.mdf;" +
+                "AttachDbFilename=C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Inventory.mdf;" +
                 "Integrated Security=True");
 
         public static void RefreshGridView()

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Teletubbies Sales and Inventory.csproj": {}
+    "C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Teletubbies Sales and Inventory.csproj": {}
   },
   "projects": {
-    "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Teletubbies Sales and Inventory.csproj": {
+    "C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Teletubbies Sales and Inventory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Teletubbies Sales and Inventory.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Teletubbies Sales and Inventory.csproj",
         "projectName": "Teletubbies Sales and Inventory",
-        "projectPath": "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\Teletubbies Sales and Inventory.csproj",
-        "packagesPath": "C:\\Users\\udalj\\.nuget\\packages\\",
-        "outputPath": "C:\\Skyrim Special DL\\Teletubbies_Sales_and_Inventory_2\\Teletubbies_Sales_and_Inventory\\Teletubbies Sales and Inventory\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Teletubbies Sales and Inventory.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\udalj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

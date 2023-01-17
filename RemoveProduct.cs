@@ -13,6 +13,7 @@ namespace Teletubbies_Sales_and_Inventory
 {
     public partial class RemoveProduct : Form
     {
+        int selectedProductId = 0;
         public RemoveProduct()
         {
             InitializeComponent();
@@ -26,14 +27,14 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (currentRowIndex >= 0)
+            if (selectedProductId >= 0)
             {
                 SQL.conn.Open();
                 SqlCommand cmd = SQL.conn.CreateCommand();
-                cmd.CommandText = $"DELETE FROM Products WHERE productID = {currentRowIndex + 1}";
+                cmd.CommandText = $"DELETE FROM Products WHERE productID = {selectedProductId}";
                 cmd.ExecuteNonQuery();
                 SQL.conn.Close();
-                ItemsData.addDeletedID(currentRowIndex + 1);
+                ItemsData.addDeletedID(selectedProductId);
                 SQL.RefreshGridView();
                 InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
                 gridviewRemoveProductList.DataSource = ItemsData.Inventory;
@@ -43,7 +44,7 @@ namespace Teletubbies_Sales_and_Inventory
                     toolStripProgressBarCompletion.PerformStep();
                 }
                 toolStripLabelOperationStatus.Text = "Selection successfully deleted.";
-                currentRowIndex = -1;
+                selectedProductId = -1;
                 toolStripLabelCurrentSelection.Text = "No cell currently selected.";
             }
             else
@@ -56,8 +57,8 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void gridviewRemoveProductList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            currentRowIndex = (int) gridviewRemoveProductList.Rows[e.RowIndex].Cells[0].Value;
-            toolStripLabelCurrentSelection.Text = $"Current selected ID is {currentRowIndex}";
+            selectedProductId = (int) gridviewRemoveProductList.Rows[e.RowIndex].Cells[0].Value;
+            toolStripLabelCurrentSelection.Text = $"Current selected ID is {selectedProductId}";
         }
     }
 }
