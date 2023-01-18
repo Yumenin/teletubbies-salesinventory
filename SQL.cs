@@ -10,10 +10,11 @@ namespace Teletubbies_Sales_and_Inventory
 {
     internal class SQL
     {
+        static String SQLDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
         public static SqlConnection conn = new SqlConnection("" +
                 "Data Source=(LocalDB)\\MSSQLLocalDB;" +
-                "AttachDbFilename=C:\\Users\\user\\Desktop\\project-bscs\\comprog-csharp\\teletubbies-salesinventory\\Inventory.mdf;" +
+                $"AttachDbFilename={SQLDir}\\Inventory.mdf;" +
                 "Integrated Security=True");
 
         public static void RefreshGridView()

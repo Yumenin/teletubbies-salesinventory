@@ -80,7 +80,7 @@ namespace Teletubbies_Sales_and_Inventory
         {
             if (numUpDownDiscountRate.Value > 0)
             {
-                numUpDownCurrentPrice.Value = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * numUpDownDiscountRate.Value));
+                numUpDownCurrentPrice.Value = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * (numUpDownDiscountRate.Value / 100)));
             }
             else
             {
@@ -92,7 +92,7 @@ namespace Teletubbies_Sales_and_Inventory
         {
             if (numUpDownNormalPrice.Value > 0)
             {
-                numUpDownCurrentPrice.Value = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * numUpDownDiscountRate.Value));
+                numUpDownCurrentPrice.Value = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * (numUpDownDiscountRate.Value / 100)));
             }
         }
     }

@@ -33,5 +33,10 @@ namespace Teletubbies_Sales_and_Inventory
             testProduct.productName = "Test";
            /* ListViewItem productTest = new ListViewItem(testProduct);*/
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

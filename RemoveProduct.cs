@@ -13,7 +13,7 @@ namespace Teletubbies_Sales_and_Inventory
 {
     public partial class RemoveProduct : Form
     {
-        int selectedProductId = 0;
+        int selectedProductId = -1;
         public RemoveProduct()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace Teletubbies_Sales_and_Inventory
                 cmd.ExecuteNonQuery();
                 SQL.conn.Close();
                 ItemsData.addDeletedID(selectedProductId);
+                ItemsData.updateDeletedIDList();
                 SQL.RefreshGridView();
                 InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
                 gridviewRemoveProductList.DataSource = ItemsData.Inventory;

@@ -49,9 +49,12 @@ namespace Teletubbies_Sales_and_Inventory
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            ItemsData.deletedIDs.Clear();
             for(int i = 0; i < dt.Rows.Count; ++i)
             {
                 ItemsData.deletedIDs.Add(Convert.ToInt32(dt.Rows[i][1]));
+                //MessageBox.Show($"From updateDeletedID, {Convert.ToInt32(dt.Rows[i][1])}");
+                //MessageBox.Show($"list count: {ItemsData.deletedIDs.Count}");
             }
             SQL.conn.Close();
         }

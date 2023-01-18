@@ -23,6 +23,7 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void button1_Click(object sender, EventArgs e) // Add Button
         {
+            bool deletedIDsExist = false;
             if (ItemsData.deletedIDs.Count > 0)
             {
                 /*string test = "";
@@ -31,7 +32,14 @@ namespace Teletubbies_Sales_and_Inventory
                     test += $"{i.ToString()}, ";
                 }
                 MessageBox.Show($"Deleted ids exists, {test}");*/
+                //MessageBox.Show($"True: {string.Join(",", ItemsData.deletedIDs)}");
                 txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
+                deletedIDsExist = true;
+            }
+            else
+            {
+                //MessageBox.Show($"False, {string.Join(",", ItemsData.deletedIDs)}");
+                txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
             }
             SQL.conn.Open();
             SqlCommand cmd = SQL.conn.CreateCommand();
@@ -39,24 +47,30 @@ namespace Teletubbies_Sales_and_Inventory
                 $"'{txtProductID.Text}'," +
                 $"'{txtProductName.Text}'," +
                 $"'{numUpDownCurrentStock.Value}'," +
-                $"'{txtCurrentPrice.Text}'," +
+                $"'{(txtCurrentPrice.Text.Length > 0 ? txtCurrentPrice.Text : Convert.ToInt32("0"))}'," +
                 $"'{numUpDownNormalPrice.Value}'," +
                 $"'{numUpDownDiscountRate.Value}')";
             cmd.ExecuteNonQuery();
             SQL.conn.Close();
             SQL.RefreshGridView();
             InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
-            if (ItemsData.deletedIDs.Count > 0)
+            if (deletedIDsExist)
             {
                 ItemsData.renewDeletedId(Convert.ToInt32(txtProductID.Text));
                 ItemsData.updateDeletedIDList();
+                //MessageBox.Show($"True 2: {string.Join(",", ItemsData.deletedIDs)}");
                 if (ItemsData.deletedIDs.Count == 0)
                 {
                     txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
                 }
+                else
+                {
+                    txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
+                }
             }
             else
             {
+                //MessageBox.Show($"False 2: {string.Join(",", ItemsData.deletedIDs)}");
                 txtProductID.Text = (ItemsData.Inventory.Rows.Count + 1).ToString();
             }
             MessageBox.Show("Added product.", "Product added", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,7 +97,7 @@ namespace Teletubbies_Sales_and_Inventory
         {
             if (numUpDownDiscountRate.Value > 0)
             {
-                txtCurrentPrice.Text = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * numUpDownDiscountRate.Value)).ToString();
+                txtCurrentPrice.Text = ((numUpDownNormalPrice.Value) - (numUpDownNormalPrice.Value * (numUpDownDiscountRate.Value / 100))).ToString();
             }
             else
             {
@@ -95,7 +109,7 @@ namespace Teletubbies_Sales_and_Inventory
         {
             if (numUpDownNormalPrice.Value > 0)
             {
-                txtCurrentPrice.Text = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * numUpDownDiscountRate.Value)).ToString();
+                txtCurrentPrice.Text = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * (numUpDownDiscountRate.Value / 100))).ToString();
             }
         }
 

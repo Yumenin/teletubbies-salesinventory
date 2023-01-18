@@ -99,3 +99,5 @@ C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj
 C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
 C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
 C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Cashier.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.CashierSearch.resources
