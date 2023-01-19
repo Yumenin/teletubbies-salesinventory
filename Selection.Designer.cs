@@ -61,6 +61,7 @@
             this.btnCashier.TabIndex = 1;
             this.btnCashier.Text = "Cashier";
             this.btnCashier.UseVisualStyleBackColor = false;
+            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
             // label1
             // 
@@ -94,6 +95,7 @@
             this.Controls.Add(this.btnInventoryManager);
             this.Name = "Selection";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Selection_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

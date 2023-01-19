@@ -4,6 +4,12 @@
     <Compile Update="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CashierSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="InventoryManagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>

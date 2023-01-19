@@ -13,9 +13,11 @@ namespace Teletubbies_Sales_and_Inventory
 {
     public partial class InventoryManagerWindow : Form
     {
+        public static InventoryManagerWindow InventoryManagerWindow_Instance;
         public InventoryManagerWindow()
         {
             InitializeComponent();
+            InventoryManagerWindow_Instance = this;
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
@@ -33,12 +35,6 @@ namespace Teletubbies_Sales_and_Inventory
 
         }
 
-        private void InventoryManagerWindow_Load(object sender, EventArgs e)
-        {
-            gridviewProductList.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode) DataGridViewAutoSizeColumnMode.Fill;
-            gridviewProductList.DataSource = ItemsData.Products;
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             new UpdateProduct().ShowDialog();
@@ -52,16 +48,9 @@ namespace Teletubbies_Sales_and_Inventory
         private void InventoryManagerWindow_Load_1(object sender, EventArgs e)
         {
             gridviewProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            SQL.conn.Open();
-
-            SqlCommand cmd = SQL.conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM Products";
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            gridviewProductList.DataSource = dt;
-
-            SQL.conn.Close();
+            SQL.RefreshGridView();
+            ItemsData.updateDeletedIDList();
+            gridviewProductList.DataSource = ItemsData.Inventory;
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -77,6 +66,12 @@ namespace Teletubbies_Sales_and_Inventory
         private void label1_Click(object sender, EventArgs e)
         {
                 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SQL.RefreshGridView();
+            gridviewProductList.Refresh();
         }
     }
 }

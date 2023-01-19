@@ -83,6 +83,7 @@
             // 
             this.txtProductID.Location = new System.Drawing.Point(137, 78);
             this.txtProductID.Name = "txtProductID";
+            this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(185, 23);
             this.txtProductID.TabIndex = 20;
             this.txtProductID.ModifiedChanged += new System.EventHandler(this.txtProductID_ModifiedChanged);
@@ -174,6 +175,11 @@
             this.numUpDownCurrentPrice.DecimalPlaces = 2;
             this.numUpDownCurrentPrice.Enabled = false;
             this.numUpDownCurrentPrice.Location = new System.Drawing.Point(137, 237);
+            this.numUpDownCurrentPrice.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
             this.numUpDownCurrentPrice.Name = "numUpDownCurrentPrice";
             this.numUpDownCurrentPrice.ReadOnly = true;
             this.numUpDownCurrentPrice.Size = new System.Drawing.Size(185, 23);
@@ -183,6 +189,11 @@
             // 
             this.numUpDownNormalPrice.DecimalPlaces = 2;
             this.numUpDownNormalPrice.Location = new System.Drawing.Point(137, 285);
+            this.numUpDownNormalPrice.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
             this.numUpDownNormalPrice.Name = "numUpDownNormalPrice";
             this.numUpDownNormalPrice.Size = new System.Drawing.Size(185, 23);
             this.numUpDownNormalPrice.TabIndex = 31;
@@ -191,11 +202,6 @@
             // numUpDownDiscountRate
             // 
             this.numUpDownDiscountRate.DecimalPlaces = 2;
-            this.numUpDownDiscountRate.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
             this.numUpDownDiscountRate.Location = new System.Drawing.Point(137, 333);
             this.numUpDownDiscountRate.Name = "numUpDownDiscountRate";
             this.numUpDownDiscountRate.Size = new System.Drawing.Size(185, 23);

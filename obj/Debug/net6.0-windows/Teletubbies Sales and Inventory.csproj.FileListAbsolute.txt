@@ -70,3 +70,44 @@ C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inv
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CopyComplete
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.exe
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.deps.json
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.runtimeconfig.json
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.AddProduct.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.InventoryManagerWindow.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Properties.Resources.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.RemoveProduct.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Selection.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.UpdateProduct.resources
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.GenerateResource.cache
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.AssemblyInfo.cs
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.csproj.CopyComplete
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\refint\Teletubbies Sales and Inventory.dll
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.pdb
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\Teletubbies Sales and Inventory.genruntimeconfig.cache
+C:\Users\user\Desktop\project-bscs\comprog-csharp\teletubbies-salesinventory\obj\Debug\net6.0-windows\ref\Teletubbies Sales and Inventory.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.Cashier.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\obj\Debug\net6.0-windows\Teletubbies_Sales_and_Inventory.CashierSearch.resources
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\PdfSharp.Charting.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\PdfSharp.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\de\PdfSharp.Charting.resources.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\de\PdfSharp.resources.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\MigraDoc.DocumentObjectModel.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\MigraDoc.Rendering.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\MigraDoc.RtfRendering.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\de\MigraDoc.DocumentObjectModel.resources.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\de\MigraDoc.Rendering.resources.dll
+C:\Skyrim Special DL\Teletubbies_Sales_and_Inventory_2\Teletubbies_Sales_and_Inventory\Teletubbies Sales and Inventory\bin\Debug\net6.0-windows\de\MigraDoc.RtfRendering.resources.dll

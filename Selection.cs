@@ -17,6 +17,14 @@ namespace Teletubbies_Sales_and_Inventory
           
         }
 
+        private void btnCashier_Click(object sender, EventArgs e)
+        {
+            new Cashier().Show();
+        }
 
+        private void Selection_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

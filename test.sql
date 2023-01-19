@@ -1,0 +1,3 @@
+﻿INSERT INTO DeletedIDs (DeletedID)
+VALUES (2)
+SELECT * FROM DeletedIDs

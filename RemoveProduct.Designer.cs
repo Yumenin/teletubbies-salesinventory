@@ -129,10 +129,11 @@
         private DataGridView gridviewRemoveProductList;
         private Button btnRemove;
         private Label btnMainLabel;
-        private int currentRowIndex = -1;
+/*        private int selectedProductId = -1;*/
         private StatusStrip statusStripSelectionIndicator;
         private ToolStripStatusLabel toolStripLabelCurrentSelection;
         private ToolStripProgressBar toolStripProgressBarCompletion;
         private ToolStripStatusLabel toolStripLabelOperationStatus;
+        private string selector;
     }
 }
