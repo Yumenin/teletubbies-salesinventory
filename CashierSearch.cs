@@ -34,41 +34,52 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            updateGridView();
+        }
+            
+
+        private void updateGridView()
+        {
             if (txtSearchInquiry.Text.Length == 0)
             {
                 searchProductGridView.DataSource = ItemsData.Inventory;
-                return;
             }
-            DataTable tableTest = ItemsData.Inventory.Copy();
-            if (tableTest.Rows.Count > 0)
+            else
             {
+                string SearchBoxQuery = txtSearchInquiry.Text;
+                DataTable tableTest = ItemsData.Inventory.Copy();
                 tableTest.Clear();
-            }
-            var rowQuery2 = searchProductGridView.Rows.Cast<DataGridViewRow>()
-                .Where(row => (row.Cells[1].Value != null));
-            foreach (var something in rowQuery2)
-            {
-                if (something.Cells["productName"].Value.ToString().ToLower().Contains(txtSearchInquiry.Text.ToLower()))
-                {
-                    tableTest.Rows.Add(something.Cells["productID"].Value,
-                        something.Cells["productName"].Value,
-                        something.Cells["currentStockQuantity"].Value,
-                        something.Cells["currentPrice"].Value,
-                        something.Cells["normalPrice"].Value,
-                        something.Cells["discountRate"].Value);
-                    //MessageBox.Show(something.Cells[1].Value.ToString());
-                }
-            }
-            searchProductGridView.DataSource = tableTest;
+                var rowQuery2 = searchProductGridView.Rows.Cast<DataGridViewRow>()
+                    .Where(row => (row.Cells[1].Value != null));
 
-/*            foreach (DataGridViewRow? row in searchProductGridView.Rows)
-            {
-                string currrentProductName = (string)row.Cells["productName"].Value;
-                if (currrentProductName.Contains(txtSearchInquiry.Text)) {
-                    MessageBox.Show(currrentProductName);
+
+                foreach (var something in rowQuery2)
+                {
+                    if (something.Cells["productName"].Value.ToString().ToLower().Contains(SearchBoxQuery.ToLower())
+                        || something.Cells["productID"].Value.ToString().Contains(txtSearchInquiry.Text))
+                    {
+                        // MessageBox.Show("Trying to search for item name: " + SearchBoxQuery);
+                        tableTest.Rows.Add(something.Cells["productID"].Value,
+                            something.Cells["productName"].Value,
+                            something.Cells["currentStockQuantity"].Value,
+                            something.Cells["currentPrice"].Value,
+                            something.Cells["normalPrice"].Value,
+                            something.Cells["discountRate"].Value);
+                        // MessageBox.Show(something.Cells[1].Value.ToString());
+                    }
                 }
-            }*/
+                searchProductGridView.DataSource = tableTest;
+            }
+            /*            foreach (DataGridViewRow? row in searchProductGridView.Rows)
+                        {
+                            string currrentProductName = (string)row.Cells["productName"].Value;
+                            if (currrentProductName.Contains(txtSearchInquiry.Text)) {
+                                MessageBox.Show(currrentProductName);
+                            }
+                        }*/
 
         }
     }
+
 }
+

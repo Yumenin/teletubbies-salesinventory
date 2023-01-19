@@ -59,7 +59,7 @@
             // 
             // txtSearchInquiry
             // 
-            this.txtSearchInquiry.Location = new System.Drawing.Point(572, 60);
+            this.txtSearchInquiry.Location = new System.Drawing.Point(572, 57);
             this.txtSearchInquiry.Name = "txtSearchInquiry";
             this.txtSearchInquiry.Size = new System.Drawing.Size(213, 23);
             this.txtSearchInquiry.TabIndex = 2;
