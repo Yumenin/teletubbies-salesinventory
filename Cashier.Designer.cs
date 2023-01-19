@@ -40,13 +40,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numUpDownTenderAmount = new System.Windows.Forms.NumericUpDown();
+            this.btnPay = new System.Windows.Forms.Button();
             this.numUpDownDiscount = new System.Windows.Forms.NumericUpDown();
             this.chkboxDiscount = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtChange = new System.Windows.Forms.TextBox();
-            this.txtTenderAmount = new System.Windows.Forms.TextBox();
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemoveCartProduct = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownQuantity)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownTenderAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,13 +187,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.numUpDownTenderAmount);
+            this.groupBox3.Controls.Add(this.btnPay);
             this.groupBox3.Controls.Add(this.numUpDownDiscount);
             this.groupBox3.Controls.Add(this.chkboxDiscount);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtChange);
-            this.groupBox3.Controls.Add(this.txtTenderAmount);
             this.groupBox3.Controls.Add(this.txtTotalAmount);
             this.groupBox3.Location = new System.Drawing.Point(562, 230);
             this.groupBox3.Name = "groupBox3";
@@ -199,6 +202,30 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Summary";
+            // 
+            // numUpDownTenderAmount
+            // 
+            this.numUpDownTenderAmount.Enabled = false;
+            this.numUpDownTenderAmount.Location = new System.Drawing.Point(114, 67);
+            this.numUpDownTenderAmount.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.numUpDownTenderAmount.Name = "numUpDownTenderAmount";
+            this.numUpDownTenderAmount.Size = new System.Drawing.Size(238, 23);
+            this.numUpDownTenderAmount.TabIndex = 14;
+            this.numUpDownTenderAmount.ValueChanged += new System.EventHandler(this.numUpDownTenderAmount_ValueChanged);
+            // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(57, 239);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(236, 35);
+            this.btnPay.TabIndex = 13;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // numUpDownDiscount
             // 
@@ -249,20 +276,13 @@
             // 
             // txtChange
             // 
+            this.txtChange.Enabled = false;
             this.txtChange.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChange.Location = new System.Drawing.Point(114, 112);
             this.txtChange.Name = "txtChange";
             this.txtChange.ReadOnly = true;
             this.txtChange.Size = new System.Drawing.Size(238, 39);
             this.txtChange.TabIndex = 2;
-            // 
-            // txtTenderAmount
-            // 
-            this.txtTenderAmount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenderAmount.Location = new System.Drawing.Point(114, 67);
-            this.txtTenderAmount.Name = "txtTenderAmount";
-            this.txtTenderAmount.Size = new System.Drawing.Size(238, 39);
-            this.txtTenderAmount.TabIndex = 1;
             // 
             // txtTotalAmount
             // 
@@ -314,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownQuantity)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownTenderAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).EndInit();
             this.ResumeLayout(false);
 
@@ -336,12 +357,13 @@
         private Label label6;
         private Label label5;
         private TextBox txtChange;
-        private TextBox txtTenderAmount;
         private TextBox txtTotalAmount;
         private Button btnRemoveCartProduct;
         public DataGridView cartGridView;
         private NumericUpDown numUpDownQuantity;
         private NumericUpDown numUpDownDiscount;
         private CheckBox chkboxDiscount;
+        private Button btnPay;
+        private NumericUpDown numUpDownTenderAmount;
     }
 }

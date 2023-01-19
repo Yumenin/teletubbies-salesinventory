@@ -16,6 +16,8 @@ namespace Teletubbies_Sales_and_Inventory
         public static Cashier cashierInstance;
         public decimal totalPrice;
         bool hasDiscount = false;
+        decimal tenderAmount = 0;
+        decimal change = 0;
         int selectedCartItemIndex = -1;
 
         public Cashier()
@@ -31,7 +33,6 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void Cashier_Load(object sender, EventArgs e)
         {
-  
             SQL.RefreshGridView();
             // Initialize column headers in cart grid view
             cartItems = ItemsData.Inventory.Copy();
@@ -39,12 +40,34 @@ namespace Teletubbies_Sales_and_Inventory
             cartGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             cartGridView.DataSource = cartItems;
             cartItems.Columns.Add("Quantity", typeof(System.Int32));
+            numUpDownTenderAmount.Value = tenderAmount;
+            txtChange.Text = change.ToString();
+            checkEmpty();
 
         }
 
-        private void btnDebug_Click(object sender, EventArgs e)
+        private void checkEmpty()
         {
-            cartGridView.DataSource = cartItems;
+            if (cartGridView.Rows.Count > 0)
+            {
+                chkboxDiscount.Enabled = true;
+                btnPay.Enabled = true;
+                btnRemoveCartProduct.Enabled = true;
+                numUpDownTenderAmount.Enabled = true;
+            }
+            else
+            {
+                txtProductID.Text = "";
+                txtProductName.Text = "";
+                txtPrice.Text = "";
+                numUpDownQuantity.Value = 1;
+                numUpDownDiscount.Value = 0;
+                chkboxDiscount.Checked = false;
+                chkboxDiscount.Enabled = false;
+                btnPay.Enabled = false;
+                btnRemoveCartProduct.Enabled = false;
+                numUpDownTenderAmount.Enabled = false;
+            }
         }
 
         private void cartGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -62,17 +85,24 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void numUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
-            if (selectedCartItemIndex != -1)
+            try
             {
-                cartGridView.Rows[selectedCartItemIndex].Cells[6].Value = numUpDownQuantity.Value;
-                calculateTotalPrice();
-            }
-            else
+                if (cartGridView.Rows[selectedCartItemIndex].Cells[6].Value != null)
+                {
+                    cartGridView.Rows[selectedCartItemIndex].Cells[6].Value = numUpDownQuantity.Value;
+                    calculateTotalPrice();
+                }
+                else
+                {
+
+                    MessageBox.Show($"No item was selected index was {selectedCartItemIndex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            } catch (ArgumentOutOfRangeException err)
             {
 
-                MessageBox.Show("No item was selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
+            
         }
 
         private void txtTotalAmount_TextChanged(object sender, EventArgs e)
@@ -82,6 +112,7 @@ namespace Teletubbies_Sales_and_Inventory
 
         public void calculateTotalPrice()
         {
+            checkEmpty();
             totalPrice = 0;
             if (!hasDiscount)
             {
@@ -122,9 +153,49 @@ namespace Teletubbies_Sales_and_Inventory
         }
         private void btnRemoveCartProduct_Click(object sender, EventArgs e)
         {
-  
-            cartGridView.Rows.Remove(cartGridView.Rows[selectedCartItemIndex]);
-            calculateTotalPrice();
+            if (selectedCartItemIndex != -1)
+            {
+                
+                cartGridView.Rows.Remove(cartGridView.Rows[selectedCartItemIndex]);
+                calculateTotalPrice();
+                checkEmpty();
+                selectedCartItemIndex = -1;
+                txtProductID.Text = "";
+                txtProductName.Text = "";
+                txtPrice.Text = "";
+                //numUpDownQuantity.Value = 1;
+            }
+            else
+            {
+                MessageBox.Show("Please select a cell to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (tenderAmount > totalPrice)
+            {
+                MessageBox.Show($"Your change is {change}");
+                // Transaction code (Update the stock quantity in sql and stuff)
+            } else
+            {
+                MessageBox.Show("Insufficient funds");
+            }               
+        }
+
+        private void numUpDownTenderAmount_ValueChanged(object sender, EventArgs e)
+        {
+            tenderAmount = Convert.ToDecimal(numUpDownTenderAmount.Value);
+            if (tenderAmount > totalPrice)
+            {
+                change = tenderAmount - totalPrice;
+                txtChange.Text = change.ToString();
+            }
+            else
+            {
+                change = 0;
+            }
         }
     }
 }
