@@ -14,9 +14,9 @@ namespace Teletubbies_Sales_and_Inventory
     public partial class CashierSearch : Form
     {
         private int selectedIndex = -1;
-        
-       DataGridViewRow selectedItem;
-       DataTable? CashierDataTable = Cashier.cartItems;
+
+        DataGridViewRow selectedItem;
+        DataTable? CashierDataTable = Cashier.cartItems;
         public CashierSearch()
         {
             InitializeComponent();
@@ -41,13 +41,13 @@ namespace Teletubbies_Sales_and_Inventory
         {
             updateGridView();
         }
-            
+
 
         private void updateGridView()
         {
             searchProductGridView.DataSource = ItemsData.Inventory;
 
-             if(txtSearchInquiry.Text != null) 
+            if (txtSearchInquiry.Text != null)
             {
                 string SearchBoxQuery = txtSearchInquiry.Text;
                 DataTable tableTest = ItemsData.Inventory.Copy();
@@ -73,12 +73,13 @@ namespace Teletubbies_Sales_and_Inventory
                 }
                 searchProductGridView.DataSource = tableTest;
             }
-            else
+            else 
             {
                 return;
             }
 
         }
+
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
@@ -100,6 +101,15 @@ namespace Teletubbies_Sales_and_Inventory
                         toolStripSelectionStatus.Text = "Product ID Selected: You have not selected anything.";
                         return;
                     }
+
+                }
+                if (Convert.ToDecimal(selectedItem.Cells[2].Value) == 0)
+                {
+                    selectedItem.Cells[2].Style.BackColor = Color.Red;
+                    MessageBox.Show("This item has no stocks available.", "No stocks available", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    selectedIndex = -1;
+                    toolStripSelectionStatus.Text = "Product ID Selected: You have not selected anything.";
+                    return;
                 }
                 MessageBox.Show("Added item to cart.", "Item added to cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Cashier.cartItems.Rows.Add(selectedItem.Cells["productID"].Value,

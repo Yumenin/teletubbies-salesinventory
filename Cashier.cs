@@ -1,7 +1,10 @@
-﻿using System;
+﻿using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -129,6 +132,7 @@ namespace Teletubbies_Sales_and_Inventory
                 totalPrice = totalPrice - (totalPrice * (numUpDownDiscount.Value / 100));
             }
             txtTotalAmount.Text = totalPrice.ToString();
+            updateChange();
         }
 
         private void chkbokDiscount_CheckedChanged(object sender, EventArgs e)
@@ -137,6 +141,7 @@ namespace Teletubbies_Sales_and_Inventory
             {
                 numUpDownDiscount.Enabled = true;
                 hasDiscount = true;
+                calculateTotalPrice();
             }
             else
             {
@@ -181,21 +186,70 @@ namespace Teletubbies_Sales_and_Inventory
             } else
             {
                 MessageBox.Show("Insufficient funds");
-            }               
+                return;
+            }
+
+
+            string receipt = "";
+            foreach (DataGridViewRow row in cartGridView.Rows)
+            {
+                receipt += $"\nName: {row.Cells[1].Value.ToString()}" +
+                    $"\nItem Price Per Item: {row.Cells[3].Value.ToString()} " +
+                    $"\nQuantity Bought: {row.Cells[6].Value.ToString()} " +
+                    $"\nTotal Price: {(Convert.ToDecimal(row.Cells[3].Value) * Convert.ToDecimal(row.Cells[6].Value)).ToString()} " +
+                    $"\n=========================================================\n"; 
+            }
+            receipt += $"\nGrand Total Price: {txtTotalAmount.Text}" +
+                $"\nCash Tendered: {numUpDownTenderAmount.Value}" +
+                $"\nChange: {txtChange.Text}" +
+                $"\nDate: {DateTime.Now}";
+
+            MigraDoc.DocumentObjectModel.Document doc = new MigraDoc.DocumentObjectModel.Document();
+            MigraDoc.DocumentObjectModel.Section sec = doc.AddSection();
+
+            sec.AddParagraph(receipt);
+
+            MigraDoc.Rendering.PdfDocumentRenderer docRend = new MigraDoc.Rendering.PdfDocumentRenderer(false);
+            docRend.Document = doc;
+            docRend.RenderDocument();
+
+            string fileName = $"Receipt.pdf";
+            docRend.PdfDocument.Save(fileName);
+
+            /*PdfDocument doc = new PdfDocument();
+            PdfPage page = doc.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Verdana", 11, XFontStyle.Regular);
+            gfx.DrawString(receipt, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height),
+                XStringFormat.Center);
+            
+            
+            string fileName = $"Receipt.pdf";
+            doc.Save(fileName);*/
+
+
+
         }
 
         private void numUpDownTenderAmount_ValueChanged(object sender, EventArgs e)
+        {
+            updateChange();
+            
+
+        }
+
+        private void updateChange() 
         {
             tenderAmount = Convert.ToDecimal(numUpDownTenderAmount.Value);
             if (tenderAmount > totalPrice)
             {
                 change = tenderAmount - totalPrice;
-                txtChange.Text = change.ToString();
             }
             else
             {
                 change = 0;
             }
+            txtChange.Text = change.ToString();
         }
     }
 }
