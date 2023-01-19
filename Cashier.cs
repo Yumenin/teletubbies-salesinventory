@@ -44,7 +44,7 @@ namespace Teletubbies_Sales_and_Inventory
             cartGridView.DataSource = cartItems;
             cartItems.Columns.Add("Quantity", typeof(System.Int32));
             numUpDownTenderAmount.Value = tenderAmount;
-            txtChange.Text = change.ToString();
+            txtChange.Text = change.ToString("0.00");
             checkEmpty();
 
         }
@@ -63,6 +63,8 @@ namespace Teletubbies_Sales_and_Inventory
                 txtProductID.Text = "";
                 txtProductName.Text = "";
                 txtPrice.Text = "";
+                txtTotalAmount.Text = "";
+                numUpDownTenderAmount.Value = 0;
                 numUpDownQuantity.Value = 1;
                 numUpDownDiscount.Value = 0;
                 chkboxDiscount.Checked = false;
@@ -82,7 +84,7 @@ namespace Teletubbies_Sales_and_Inventory
                 numUpDownQuantity.Value = Convert.ToDecimal(cartGridView.Rows[selectedCartItemIndex].Cells[6].Value);
                 txtProductID.Text = cartGridView.Rows[selectedCartItemIndex].Cells[0].Value.ToString();
                 txtProductName.Text = cartGridView.Rows[selectedCartItemIndex].Cells[1].Value.ToString();
-                txtPrice.Text = (Convert.ToDecimal(cartGridView.Rows[selectedCartItemIndex].Cells[3].Value) * numUpDownQuantity.Value).ToString();
+                txtPrice.Text = (Convert.ToDecimal(cartGridView.Rows[selectedCartItemIndex].Cells[3].Value) * numUpDownQuantity.Value).ToString("0.00");
             }
         }
 
@@ -131,7 +133,7 @@ namespace Teletubbies_Sales_and_Inventory
                 }
                 totalPrice = totalPrice - (totalPrice * (numUpDownDiscount.Value / 100));
             }
-            txtTotalAmount.Text = totalPrice.ToString();
+            txtTotalAmount.Text = totalPrice.ToString("0.00");
             updateChange();
         }
 
@@ -190,14 +192,15 @@ namespace Teletubbies_Sales_and_Inventory
             }
 
 
-            string receipt = "";
+            string receipt = "----------SALES INVOICE--------";
             foreach (DataGridViewRow row in cartGridView.Rows)
             {
                 receipt += $"\nName: {row.Cells[1].Value.ToString()}" +
                     $"\nItem Price Per Item: {row.Cells[3].Value.ToString()} " +
                     $"\nQuantity Bought: {row.Cells[6].Value.ToString()} " +
                     $"\nTotal Price: {(Convert.ToDecimal(row.Cells[3].Value) * Convert.ToDecimal(row.Cells[6].Value)).ToString()} " +
-                    $"\n=========================================================\n"; 
+                    $"\n=========================================================\n";
+                SQL.updateProductStocks(row);
             }
             receipt += $"\nGrand Total Price: {txtTotalAmount.Text}" +
                 $"\nCash Tendered: {numUpDownTenderAmount.Value}" +
@@ -212,10 +215,11 @@ namespace Teletubbies_Sales_and_Inventory
             MigraDoc.Rendering.PdfDocumentRenderer docRend = new MigraDoc.Rendering.PdfDocumentRenderer(false);
             docRend.Document = doc;
             docRend.RenderDocument();
-
-            string fileName = $"Receipt.pdf";
+            //var documentDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string fileName = $"Sales Invoice {DateTime.Now.TimeOfDay.Hours}-{DateTime.Now.TimeOfDay.Minutes}-{DateTime.Now.TimeOfDay.Seconds}.pdf";
             docRend.PdfDocument.Save(fileName);
-
+            cartItems.Clear();
+            checkEmpty();
             /*PdfDocument doc = new PdfDocument();
             PdfPage page = doc.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
@@ -227,7 +231,7 @@ namespace Teletubbies_Sales_and_Inventory
             string fileName = $"Receipt.pdf";
             doc.Save(fileName);*/
 
-
+            
 
         }
 
@@ -249,7 +253,7 @@ namespace Teletubbies_Sales_and_Inventory
             {
                 change = 0;
             }
-            txtChange.Text = change.ToString();
+            txtChange.Text = change.ToString("0.00");
         }
     }
 }

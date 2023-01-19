@@ -38,6 +38,19 @@ namespace Teletubbies_Sales_and_Inventory
 
         }
 
+        public static void updateProductStocks(DataGridViewRow purchasedProducts)
+        {
+            SQL.conn.Open();
+
+            SqlCommand cmd = SQL.conn.CreateCommand();
+            cmd.CommandText = "UPDATE Products" +
+                $" SET currentStockQuantity -= {purchasedProducts.Cells[6].Value}" +
+                $" WHERE productID = {purchasedProducts.Cells[0].Value}";
+            cmd.ExecuteNonQuery();
+
+            SQL.conn.Close();
+        }
+
 
     }
 }
