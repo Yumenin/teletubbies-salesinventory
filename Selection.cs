@@ -21,5 +21,10 @@ namespace Teletubbies_Sales_and_Inventory
         {
             new Cashier().Show();
         }
+
+        private void Selection_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

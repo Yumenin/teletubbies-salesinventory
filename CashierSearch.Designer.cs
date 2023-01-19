@@ -33,9 +33,12 @@
             this.txtSearchInquiry = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchProductGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddToCart = new System.Windows.Forms.Button();
+            this.selectionStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripSelectionStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchProductGridView)).BeginInit();
+            this.selectionStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -88,22 +91,41 @@
             this.searchProductGridView.RowTemplate.Height = 25;
             this.searchProductGridView.Size = new System.Drawing.Size(762, 323);
             this.searchProductGridView.TabIndex = 0;
+            this.searchProductGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchProductGridView_CellClick);
             // 
-            // button1
+            // btnAddToCart
             // 
-            this.button1.Location = new System.Drawing.Point(299, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Location = new System.Drawing.Point(299, 446);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(206, 26);
+            this.btnAddToCart.TabIndex = 4;
+            this.btnAddToCart.Text = "Add Product To Cart";
+            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
+            // 
+            // selectionStatusStrip
+            // 
+            this.selectionStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSelectionStatus});
+            this.selectionStatusStrip.Location = new System.Drawing.Point(0, 480);
+            this.selectionStatusStrip.Name = "selectionStatusStrip";
+            this.selectionStatusStrip.Size = new System.Drawing.Size(800, 22);
+            this.selectionStatusStrip.TabIndex = 5;
+            this.selectionStatusStrip.Text = "statusStrip1";
+            // 
+            // toolStripSelectionStatus
+            // 
+            this.toolStripSelectionStatus.Name = "toolStripSelectionStatus";
+            this.toolStripSelectionStatus.Size = new System.Drawing.Size(173, 17);
+            this.toolStripSelectionStatus.Text = "-- Selection Status Goes Here --";
             // 
             // CashierSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.selectionStatusStrip);
+            this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSearchInquiry);
@@ -113,6 +135,8 @@
             this.Load += new System.EventHandler(this.CashierSearch_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchProductGridView)).EndInit();
+            this.selectionStatusStrip.ResumeLayout(false);
+            this.selectionStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +149,8 @@
         private TextBox txtSearchInquiry;
         private GroupBox groupBox1;
         private DataGridView searchProductGridView;
-        private Button button1;
+        private Button btnAddToCart;
+        private StatusStrip selectionStatusStrip;
+        private ToolStripStatusLabel toolStripSelectionStatus;
     }
 }

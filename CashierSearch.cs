@@ -13,6 +13,10 @@ namespace Teletubbies_Sales_and_Inventory
 {
     public partial class CashierSearch : Form
     {
+        private int selectedIndex = -1;
+        
+       DataGridViewRow selectedItem;
+       DataTable? CashierDataTable = Cashier.cartItems;
         public CashierSearch()
         {
             InitializeComponent();
@@ -25,7 +29,8 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void CashierSearch_Load(object sender, EventArgs e)
         {
-
+            CashierDataTable = ItemsData.Inventory.Copy();
+            CashierDataTable.Clear();
             SQL.RefreshGridView();
             searchProductGridView.DataSource = ItemsData.Inventory;
             searchProductGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -40,11 +45,9 @@ namespace Teletubbies_Sales_and_Inventory
 
         private void updateGridView()
         {
-            if (txtSearchInquiry.Text.Length == 0)
-            {
-                searchProductGridView.DataSource = ItemsData.Inventory;
-            }
-            else
+            searchProductGridView.DataSource = ItemsData.Inventory;
+
+             if(txtSearchInquiry.Text != null) 
             {
                 string SearchBoxQuery = txtSearchInquiry.Text;
                 DataTable tableTest = ItemsData.Inventory.Copy();
@@ -70,13 +73,64 @@ namespace Teletubbies_Sales_and_Inventory
                 }
                 searchProductGridView.DataSource = tableTest;
             }
-            /*            foreach (DataGridViewRow? row in searchProductGridView.Rows)
-                        {
-                            string currrentProductName = (string)row.Cells["productName"].Value;
-                            if (currrentProductName.Contains(txtSearchInquiry.Text)) {
-                                MessageBox.Show(currrentProductName);
-                            }
-                        }*/
+            else
+            {
+                return;
+            }
+
+        }
+
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            /*Cashier.cashierInstance.cartGridView.*/
+
+
+            if (selectedIndex != -1)
+            {
+
+                var rowQuery3 = Cashier.cashierInstance.cartGridView.Rows.Cast<DataGridViewRow>()
+                    .Where(row => (row.Cells[0].Value != null));
+
+                foreach (var row in rowQuery3)
+                {
+                    if (row.Cells["productID"].Value.ToString().Equals(selectedItem.Cells[0].Value.ToString()))
+                    {
+                        MessageBox.Show("Item already exists in cart.", "Duplicate found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        selectedIndex = -1;
+                        toolStripSelectionStatus.Text = "Product ID Selected: You have not selected anything.";
+                        return;
+                    }
+                }
+                MessageBox.Show("Added item to cart.", "Item added to cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Cashier.cartItems.Rows.Add(selectedItem.Cells["productID"].Value,
+                            selectedItem.Cells["productName"].Value,
+                            selectedItem.Cells["currentStockQuantity"].Value,
+                            selectedItem.Cells["currentPrice"].Value,
+                            selectedItem.Cells["normalPrice"].Value,
+                            selectedItem.Cells["discountRate"].Value,
+                            1);
+                Cashier.cashierInstance.calculateTotalPrice();
+                selectedIndex = -1;
+                toolStripSelectionStatus.Text = "Product ID Selected: You have not selected anything.";
+                //MessageBox.Show(selectedItem.Cells[0].GetType().ToString());
+            }
+            else
+            {
+                MessageBox.Show("You have not selected anything", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+          
+
+        private void searchProductGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedIndex = e.RowIndex;
+            if (selectedIndex != -1)
+            {
+                // Kevin's Code
+                selectedItem = searchProductGridView.Rows[selectedIndex];
+                toolStripSelectionStatus.Text = $"Product ID Selected: {searchProductGridView.Rows[selectedIndex].Cells[0].Value}";
+            }
 
         }
     }

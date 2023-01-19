@@ -26,13 +26,6 @@ namespace Teletubbies_Sales_and_Inventory
             bool deletedIDsExist = false;
             if (ItemsData.deletedIDs.Count > 0)
             {
-                /*string test = "";
-                foreach(int i in ItemsData.deletedIDs)
-                {
-                    test += $"{i.ToString()}, ";
-                }
-                MessageBox.Show($"Deleted ids exists, {test}");*/
-                //MessageBox.Show($"True: {string.Join(",", ItemsData.deletedIDs)}");
                 txtProductID.Text = ItemsData.deletedIDs.ElementAt(0).ToString();
                 deletedIDsExist = true;
             }
@@ -53,6 +46,7 @@ namespace Teletubbies_Sales_and_Inventory
             cmd.ExecuteNonQuery();
             SQL.conn.Close();
             SQL.RefreshGridView();
+            //Update the form of Inventory Manger Window, particularly the datagridview
             InventoryManagerWindow.InventoryManagerWindow_Instance.gridviewProductList.DataSource = ItemsData.Inventory;
             if (deletedIDsExist)
             {
