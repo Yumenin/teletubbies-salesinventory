@@ -143,6 +143,11 @@ namespace Teletubbies_Sales_and_Inventory
             }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
