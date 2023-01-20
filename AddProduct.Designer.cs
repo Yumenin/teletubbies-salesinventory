@@ -163,10 +163,10 @@
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddProduct.BackColor = System.Drawing.Color.Lime;
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddProduct.ForeColor = System.Drawing.Color.Beige;
+            this.btnAddProduct.ForeColor = System.Drawing.Color.Black;
             this.btnAddProduct.Location = new System.Drawing.Point(548, 192);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(256, 48);
@@ -232,6 +232,7 @@
             // 
             this.numUpDownCurrentStock.BackColor = System.Drawing.Color.CornflowerBlue;
             this.numUpDownCurrentStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numUpDownCurrentStock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numUpDownCurrentStock.Location = new System.Drawing.Point(10, 24);
             this.numUpDownCurrentStock.Name = "numUpDownCurrentStock";
             this.numUpDownCurrentStock.Size = new System.Drawing.Size(236, 19);
@@ -265,6 +266,7 @@
             this.numUpDownNormalPrice.BackColor = System.Drawing.Color.CornflowerBlue;
             this.numUpDownNormalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numUpDownNormalPrice.DecimalPlaces = 2;
+            this.numUpDownNormalPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numUpDownNormalPrice.Location = new System.Drawing.Point(13, 24);
             this.numUpDownNormalPrice.Maximum = new decimal(new int[] {
             -1,
@@ -293,6 +295,7 @@
             this.numUpDownDiscountRate.BackColor = System.Drawing.Color.CornflowerBlue;
             this.numUpDownDiscountRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numUpDownDiscountRate.DecimalPlaces = 2;
+            this.numUpDownDiscountRate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numUpDownDiscountRate.Location = new System.Drawing.Point(8, 24);
             this.numUpDownDiscountRate.Name = "numUpDownDiscountRate";
             this.numUpDownDiscountRate.Size = new System.Drawing.Size(236, 19);

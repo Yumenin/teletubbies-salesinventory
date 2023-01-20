@@ -211,7 +211,7 @@ namespace Teletubbies_Sales_and_Inventory
             MigraDoc.DocumentObjectModel.Section sec = doc.AddSection();
 
             sec.AddParagraph(receipt);
-
+            
             MigraDoc.Rendering.PdfDocumentRenderer docRend = new MigraDoc.Rendering.PdfDocumentRenderer(false);
             docRend.Document = doc;
             docRend.RenderDocument();
@@ -254,6 +254,11 @@ namespace Teletubbies_Sales_and_Inventory
                 change = 0;
             }
             txtChange.Text = change.ToString("0.00");
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

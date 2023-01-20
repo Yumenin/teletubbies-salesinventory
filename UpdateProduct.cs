@@ -95,5 +95,10 @@ namespace Teletubbies_Sales_and_Inventory
                 numUpDownCurrentPrice.Value = (numUpDownNormalPrice.Value - (numUpDownNormalPrice.Value * (numUpDownDiscountRate.Value / 100)));
             }
         }
+
+        private void lblCurrentPrice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

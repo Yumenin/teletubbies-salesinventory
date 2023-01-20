@@ -63,6 +63,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cartGridView);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(34, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(522, 473);
@@ -76,6 +77,7 @@
             this.cartGridView.AllowUserToDeleteRows = false;
             this.cartGridView.AllowUserToResizeColumns = false;
             this.cartGridView.AllowUserToResizeRows = false;
+            this.cartGridView.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cartGridView.Location = new System.Drawing.Point(6, 22);
             this.cartGridView.Name = "cartGridView";
@@ -95,12 +97,14 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(562, 58);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(358, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Product Details";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // numUpDownQuantity
             // 
@@ -196,6 +200,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtChange);
             this.groupBox3.Controls.Add(this.txtTotalAmount);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(562, 230);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(358, 292);
@@ -219,12 +224,15 @@
             // 
             // btnPay
             // 
+            this.btnPay.BackColor = System.Drawing.Color.Lime;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPay.ForeColor = System.Drawing.Color.Black;
             this.btnPay.Location = new System.Drawing.Point(57, 239);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(236, 35);
             this.btnPay.TabIndex = 13;
             this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // numUpDownDiscount
@@ -296,28 +304,36 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(34, 528);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 25);
             this.button1.TabIndex = 3;
             this.button1.Text = "Search Product";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRemoveCartProduct
             // 
+            this.btnRemoveCartProduct.BackColor = System.Drawing.Color.Red;
+            this.btnRemoveCartProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRemoveCartProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveCartProduct.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRemoveCartProduct.Location = new System.Drawing.Point(196, 528);
             this.btnRemoveCartProduct.Name = "btnRemoveCartProduct";
             this.btnRemoveCartProduct.Size = new System.Drawing.Size(156, 25);
             this.btnRemoveCartProduct.TabIndex = 4;
             this.btnRemoveCartProduct.Text = "Remove";
-            this.btnRemoveCartProduct.UseVisualStyleBackColor = true;
+            this.btnRemoveCartProduct.UseVisualStyleBackColor = false;
             this.btnRemoveCartProduct.Click += new System.EventHandler(this.btnRemoveCartProduct_Click);
             // 
             // Cashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1004, 626);
             this.Controls.Add(this.btnRemoveCartProduct);
             this.Controls.Add(this.button1);
